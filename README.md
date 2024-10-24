@@ -1,0 +1,2 @@
+# LITA_Capstone_Project_Customer_Segmentation_for_a_Subscription_Service
+Documentation
