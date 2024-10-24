@@ -18,8 +18,6 @@
 
 [Data Visualization](#data-visualization)
 
-[Recommendation](#recommendation)
-
 [Conclusion](#conclusion)
 
 ---
