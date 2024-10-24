@@ -2,25 +2,25 @@
 
 ### Project Title: Customer Segmentation for a Subscription Service Analysis
 ---
-[Project Overview](project-overview)
+[Project Overview](#project-overview)
 
-[Data Source](Data-source)
+[Data Source](#data-source)
 
-[Tools Used](Tool-Used)
+[Tools Used](#tool-used)
 
-[Data Cleaning and Preparation](data-cleaning-and-preparation)
+[Data Cleaning and Preparation](#data-cleaning-and-preparation)
 
-[Pivot Table Report](pivot-table-report)
+[Pivot Table Report](#pivot-table-report)
 
-[Exploratory Data Analysis(EDA)](exploratory-data-analysis(EDA))
+[Exploratory Data Analysis(EDA)](#exploratory-data-analysis(eda))
 
-[SQL Queries for Analysis](SQL-queries-for-analysis)
+[SQL Queries for Analysis](#sql-queries-for-analysis)
 
-[Data Visualization](data-visualization)
+[Data Visualization](#data-visualization)
 
-[Recommendation](recommendation)
+[Recommendation](#recommendation)
 
-[Conclusion](conclusion)
+[Conclusion](#conclusion)
 
 ---
 ### Project Overview
