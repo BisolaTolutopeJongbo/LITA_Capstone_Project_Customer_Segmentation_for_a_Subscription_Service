@@ -14,7 +14,7 @@
 
 [Exploratory Data Analysis(EDA)](#exploratory-data-analysis(eda))
 
-[SQL Queries for Analysis](#sql-queries-for-analysis)
+[SQL Queries  Analysis](#sql-queries-analysis)
 
 [Data Visualization](#data-visualization)
 
@@ -58,7 +58,7 @@ A customer dataset containing information about regions, subscription types, sta
 
 ---
 
-  ### SQL Queries for Analysis
+  ### SQL Queries Analysis
 1. 	Total Number of Customers by Region
    ```sql
 CREATE VIEW VW1_LITAcustomer AS
