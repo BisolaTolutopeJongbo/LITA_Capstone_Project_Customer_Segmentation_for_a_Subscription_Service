@@ -61,66 +61,69 @@ A customer dataset containing information about regions, subscription types, sta
 ---
 
   ### SQL Queries for Analysis
-1. Total Sales for Each Product Category 
-```sql
-CREATE VIEW VW_LITA_SALES_CAPSTONE_PROJECT
-AS
-SELECT Product,SUM(Quantity) as Total_Sales
-FROM [dbo].[Sales Data]
-GROUP BY Product
-```
-2. Number of Sales Transactions in Each Region
-```sql
-CREATE VIEW VW2_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT Region, SUM(Quantity) AS Total_Sales
-FROM [dbo].[Sales Data]
-GROUP BY Region;
-```
-3. Highest-Selling Product by Total Sales Value
-```sql
-CREATE VIEW VW3_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT Product, SUM(Quantity) AS Total_Sales
-FROM [dbo].[Sales Data]
-GROUP BY Product
-ORDER BY Total_Sales DESC;
-```
-4. Total Revenue Per Product
-```sql
-CREATE VIEW VW4_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT Product, SUM(Quantity * UnitPrice) AS Total_Revenue
-FROM [dbo].[Sales Data]
-GROUP BY Product;
-```
-5. Monthly Sales Totals for the Current Year (2024)
-```sql
-CREATE VIEW VW5_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT OrderMonth, SUM(Quantity) AS Total_Sales
-FROM [dbo].[Sales Data]
-WHERE OrderYear = 2024
-GROUP BY OrderMonth;
-```
-6. Top 5 Customers by Total Purchase Amount
-```sql
-CREATE VIEW VW6_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT TOP 5 Customer_Id, SUM(Quantity) AS Total_Purchase
-FROM [dbo].[Sales Data]
-GROUP BY Customer_Id
-ORDER BY Total_Purchase DESC;
-```
-7. Percentage of Total Sales Contributed by Each Region
-```sql
-CREATE VIEW VW7_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT Region, SUM(Revenue) / SUM(Quantity) * 0.1 AS Percentage_of_Total_Sales
-FROM [dbo].[Sales Data]
+1. 	Total Number of Customers by Region
+   ```sql
+CREATE VIEW VW1_LITAcustomer AS
+SELECT Region, COUNT(CustomerID) AS Total_No_of_Customers
+FROM [dbo].[Customer Data]
 GROUP BY Region
-ORDER BY Percentage_of_Total_Sales;
 ```
-8. Products with No Sales in the Last Quarter
+2. 	Most Popular Subscription Type
 ```sql
-CREATE VIEW VW8_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT Product, SUM(Quantity) AS Sales
-FROM [dbo].[Sales Data]
-WHERE MONTH(OrderDate) BETWEEN 10 AND 12
+CREATE VIEW VW2_LITAcustomer AS
+SELECT SubscriptionType, COUNT(CustomerID) AS NO_Of_Customers
+FROM [dbo].[Customer Data]
+GROUP BY SubscriptionType
+
+```
+3.	Customers Who Canceled Within 6 Months
+```sql
+CREATE VIEW VW3_LITAcustomer AS
+SELECT CustomerName, Canceled, SubscriptionStart
+FROM [dbo].[Customer Data]
+WHERE Canceled = 0 AND MONTH(SubscriptionStart) <= 6
+
+```
+4. 	Average Subscription Duration
+```sql
+CREATE VIEW VW4_LITAcustomer AS
+SELECT COUNT(CustomerID) AS All_Customers, AVG(DATEDIFF(DAY, SubscriptionStart, SubscriptionEnd)) AS Average_Subscription_Duration
+FROM [dbo].[Customer Data]
+WHERE SubscriptionEnd IS NOT NULL
+
+```
+5.	Customers with Subscriptions Longer than 12 Months
+```sql
+CREATE VIEW VW5_LITAcustomer AS
+SELECT CustomerName, SubscriptionType, SubscriptionStart, SubscriptionEnd
+FROM [dbo].[Customer Data]
+WHERE DATEDIFF(MONTH, SubscriptionStart, SubscriptionEnd) >= 12
+
+```
+6. Total Revenue by Subscription Type
+```sql
+CREATE VIEW VW6_LITAcustomer AS
+SELECT SubscriptionType, SUM(Revenue) AS Total_Revenue
+FROM [dbo].[Customer Data]
+GROUP BY SubscriptionType
+
+```
+7. 	Top 3 Regions by Subscription Cancellations
+```sql
+CREATE VIEW VW7_LITAcustomer AS
+SELECT TOP 3 Region, COUNT(Canceled) AS Cancellations
+FROM [dbo].[Customer Data]
+WHERE Canceled = 1
+GROUP BY Region
+
+```
+8. Total Active and Canceled Subscriptions:
+```sql
+CREATE VIEW VW8_LITAcustomer AS
+SELECT
+SUM(CASE WHEN Canceled = 0 THEN 1 ELSE 0 END) AS ActiveSubscriptions,
+SUM(CASE WHEN Canceled = 1 THEN 1 ELSE 0 END) AS CanceledSubscriptions
+FROM [dbo].[Customer Data]
 ```
 ---
 ### Data Visualization
