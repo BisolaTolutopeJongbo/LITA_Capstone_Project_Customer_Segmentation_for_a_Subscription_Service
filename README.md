@@ -44,8 +44,8 @@ A customer dataset containing information about regions, subscription types, sta
 ---
 
 ### Pivot Table Report
+<img width="820" alt="Customer Pivot Table" src="https://github.com/user-attachments/assets/d2f5d6eb-911f-4b81-828d-48178e13ebac">
 
-<img width="779" alt="Customer Data Pivot Table Report" src="https://github.com/user-attachments/assets/df361e5c-0ca7-43d6-ad3b-60be678492c4">
 ---
 ---
 
