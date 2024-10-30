@@ -137,4 +137,5 @@ FROM [dbo].[Customer Data]
 ---
 
 ### Conclusion
-
+This project demonstrates the process of data cleaning, analysis, and visualization of Customer Segmentation for a Subscription Service.
+By leveraging SQL Server for queries and Power BI for dashboards, key business insights such as customer behavior, revenue trends, and regional performance were generated to help drive strategic decisions.
