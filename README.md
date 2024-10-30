@@ -126,9 +126,8 @@ FROM [dbo].[Customer Data]
 ---
 ### Data Visualization
 <img width="943" alt="Customer Viz 1" src="https://github.com/user-attachments/assets/c7ebb4a0-2668-4171-8a50-6f62d38a0478">
-<img width="942" alt="Customer Viz2" src="https://github.com/user-attachments/assets/a63c4d32-303e-4467-b752-3bbe7f9469cb">
+<img width="935" alt="Customer Viz2" src="https://github.com/user-attachments/assets/f566a9cb-d712-42d0-a01e-571497a2e817">
 
-[Downnload pdf](https://github.com/user-attachments/files/17572941/Customer.Data.pdf)
 
 
 ---
