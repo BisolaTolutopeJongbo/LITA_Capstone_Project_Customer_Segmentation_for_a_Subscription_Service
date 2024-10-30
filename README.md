@@ -129,6 +129,10 @@ FROM [dbo].[Customer Data]
 <img width="935" alt="Customer Viz2" src="https://github.com/user-attachments/assets/f566a9cb-d712-42d0-a01e-571497a2e817">
 
 
+[Download Dashboard pdf](https://github.com/user-attachments/files/17573154/Customer.Data.pdf)
+
+
+
 
 ---
 
