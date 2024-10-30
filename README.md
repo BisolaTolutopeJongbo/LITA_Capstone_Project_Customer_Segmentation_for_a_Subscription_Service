@@ -27,7 +27,7 @@ This project focuses on analyzing customer data for a subscription service to id
 ---
 
 ### Data Source
-A customer dataset containing information about regions, subscription types, start and end dates, revenue, and subscription status (active or canceled)[[Customer Data.csv](https://github.com/user-attachments/files/17507351/Customer.Data.csv)
+A customer dataset containing information about regions, subscription types, start and end dates, revenue, and subscription status (active or canceled)[[Download Dataset](https://github.com/user-attachments/files/17507351/Customer.Data.csv)
 ]
 
 ---
@@ -125,6 +125,10 @@ FROM [dbo].[Customer Data]
 ```
 ---
 ### Data Visualization
+<img width="943" alt="Customer Viz 1" src="https://github.com/user-attachments/assets/c7ebb4a0-2668-4171-8a50-6f62d38a0478">
+<img width="942" alt="Customer Viz2" src="https://github.com/user-attachments/assets/a63c4d32-303e-4467-b752-3bbe7f9469cb">
+
+[Downnload pdf](https://github.com/user-attachments/files/17572481/Customer.Data.pdf)
 
 ---
 
