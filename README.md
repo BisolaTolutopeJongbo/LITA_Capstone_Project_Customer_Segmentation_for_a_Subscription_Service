@@ -119,10 +119,11 @@ GROUP BY Region
 8. Total Active and Canceled Subscriptions:
 ```sql
 CREATE VIEW VW8_LITAcustomer AS
-SELECT
-SUM(CASE WHEN Canceled = 0 THEN 1 ELSE 0 END) AS ActiveSubscriptions,
-SUM(CASE WHEN Canceled = 1 THEN 1 ELSE 0 END) AS CanceledSubscriptions
+SELECT Canceled,
+SUM( CASE WHEN Canceled = 1 THEN 1 ELSE 0  END) AS ActiveSubscriptions,
+SUM (CASE WHEN Canceled = 0 THEN 1 ELSE 0 END) AS CanceledSubscriptions
 FROM [dbo].[Customer Data]
+GROUP BY Canceled
 ```
 ---
 ### Data Visualization
